@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rare Terra</title>
+  <!--Linking Font Awesome for icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!--Linking Swiper CSS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="./styles copy 2.css" >
+
+
+<style>
+    #slider {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh; 
+    max-width: 1600px;
+    position: relative;
+    }
+
+    #slider figure {
+      display: flex;
+      justify-content: flex-start;
+      position: relative;
+      width: calc(100% * 6);
+      padding: 0;
+      margin:0;
+      animation: slider 20s infinite ease-in-out;
+    }
+
+    #slider figure img {                      
+      width: 16.6666%;
+      height: auto;
+      transition: filter 0.8s ease, transform 0.8s ease, opacity 0.8s ease;
+      transform: scale(0.90);
+      opacity: 0.7;
+    }
+
+    #slider figure img.active {
+    filter: blur(0);
+    transform: scale(1.03);
+    opacity: 1;
+    z-index: 2;
+  }
+
+@keyframes slider {
+  0%   { left: 0; }          /* Show image 1 */
+  13%  { left: 0; }
+
+  16%  { left: -100%; }      /* Slide to image 2 */
+  30%  { left: -100%; }
+
+  33%  { left: -200%; }      /* Slide to image 3 */
+  47%  { left: -200%; }
+
+  50%  { left: -300%; }      /* Slide to image 4 */
+  64%  { left: -300%; }
+
+  67%  { left: -400%; }      /* Slide to image 5 */
+  81%  { left: -400%; }
+
+  84%  { left: -500%; }      /* Slide to image 6 */
+  100% { left: -500%; }      /* End — loops back smoothly */
+}
+
+  </style>
+
+</head>
+<body>
+
+  <!--Header / Navbar-->
+  <header>
+    <section class="navbar section-content">  
+
+      <div class="hero-image-wrapper">
+        <img src="./Rare_Terra6.jpg" 
+        class="hero-image">
+      </div>
+      <div class="nav-menu">
+      </div>
+
+    </div>
+   
+      </a>
+      <ul class="nav-menu">
+        <button id="menu-close-button" class="fas fa-times"></button>
+
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#technology" class="nav-link">Technology</a>
+        </li><li class="nav-item">
+          <a href="#ourteam" class="nav-link">Our Team</a>
+        </li><li class="nav-item">
+          <a href="#workwithus" class="nav-link">Work with us</a>
+        </li><li class="nav-item">
+          <a href="#contactus" class="contact-button">Contact us</a>
+          
+        </li>
+      </ul>
+
+      <button id="menu-open-button" class="fas fa-bars"></button>
+    </nav>
+  </header>
+
+  <main>
+    <!--Hero section-->
+    <section class="hero-section" id="home">
+       
+      <video class="background-video" src="Home.mp4" autoplay muted loop playsinline></video>
+
+      <div class="section-content">
+        <div class="hero-details">
+          <h2 class="title">Delivering Low-cost American-made</h2>
+          <h3 class="title">Rare Earth Metals NOW</h3>
+          <p class="description">RareTerra is reimagining the rare earth supply chain—making it sustainable, secure, 
+            and domestically driven by replacing complex hydrometallurgical systems with cleaner, more efficient biological processes.</p>
+   
+          <div class="button-">
+            <a href="#" class="learn-button">Learn</a>  
+          </div>
+</div>
+
+          <!-- Learn More Modal -->
+<div id="learnModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+
+    <div class="modal-text">
+    <h1>Mission</h1>
+    <p>
+      RareTerra’s mission is to transform rare earth production with biotechnology, delivering low-cost, 
+          American-made materials that power clean energy, advanced communications, and consumer technologies. By eliminating toxic chemicals, 
+          reducing greenhouse gas emissions, and recycling critical minerals, we are building a circular and sustainable supply chain.
+    </p>
+
+    <h1>Vision</h1>
+    <p>
+      RareTerra harnesses the power of biology to make rare earth production clean, circular, and accessible - fueling the technologies
+      that drive our future.
+    </p> 
+
+
+  </div>
+</div>
+</div>
+      
+    </section>
+
+  
+    <!--Mission section-->
+    <section class="mission-section" id="mission">
+        <div class="mission-item">
+    <i class="fa-solid fa-bullseye mission-icon"></i>
+        <p class="description"> 
+          RareTerra’s mission is to transform rare earth production with biotechnology, delivering low-cost, 
+          American-made materials that power clean energy, advanced communications, and consumer technologies. By eliminating toxic chemicals, 
+          reducing greenhouse gas emissions, and recycling critical minerals, we are building a circular and sustainable supply chain.
+        </p>
+         </div>
+
+        <div class="mission-item">
+    <i class="fa-regular fa-lightbulb vision-icon"></i>
+        <p class="description">
+    RareTerra harnesses the power of biology to make rare earth production clean, circular, 
+    and accessible — fueling the technologies that drive our future.
+  </p>
+     </section>
+
+     
+
+    <!--Our Team section-->
+    <section class="team-section" id="ourteam"> 
+        <h2 class="section-title">Meet our Team</h2>
+        <p class="description">Our professional team is here to help you with any questions or concerns.</p>
+        
+        
+        <div class="slider-container swiper">
+        <div class="slider-wrapper">
+          <ul class="our-team-list swiper-wrapper">
+
+          <li class="Our-Team swiper-slide">
+            <img src="Team1.jpg" alt="User" class="user-image">
+            <div class="overlay">
+            <h2>Allan LeBlanc is the CEO of RareTerra. He has more than 12 years of experience in commercializing industrial biotechnology. 
+              Prior to RareTerra, Allan worked as VP of Business Development at Calysta, where the company raised over $300M and built the world's 
+              largest gas fermentation facility. Earlier in his career, he worked in finance and venture capital. Allan has an undergraduate degree 
+              from the University of Florida and an MBA from UC Berkeley.</h2>
+
+              <!-- LinkedIn icon link -->
+    <a href="https://www.linkedin.com/in/allanleblanc" 
+       target="_blank" 
+       class="linkedin-link">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+          </div>
+          </li>
+          
+          <li class="Our-Team swiper-slide">
+            <img src="Team2.jpg" alt="User" class="user-image">
+            <div class="overlay">
+            <h2>Nathan Good is a Co-founder and CTO of RareTerra and a leading expert in rare earth-utilizing microbes. He brings
+            15+ years of R&D experience spanning rare earth biochemistry and microbial metabolism. Before RareTerra, Nathan was a scientist 
+            at UC Berkeley, where his work on biological rare-earth capture helped shape the company’s platform. He is a 2022 Bakar Innovation 
+            Fellow and a 2023 Activate (Cyclotron Road LEEP) fellow—programs that accelerated RareTerra’s formation. Nathan earned his Ph.D. in 
+            Microbiology from the University of Washington.</h2>
+
+              <!-- LinkedIn icon link -->
+    <a href="https://www.linkedin.com/in/nathan-good-phd-9802ab175" 
+       target="_blank" 
+       class="linkedin-link">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+          </li>
+
+          <li class="Our-Team swiper-slide">
+            <img src="Team3.jpg" alt="User" class="user-image">
+            <div class="overlay">
+            <h2>N. Cecilia Martinez-Gomez is a Co-founder of RareTerra, an endowed Chair, Bakar Faculty Fellow, and Associate Professor in the 
+            Department of Plant and Microbial Biology at UC Berkeley. She received an NSF CAREER Award for her pioneering work with rare-earth 
+            elements and microbial metabolism. Dr. Martinez-Gomez earned her bachelor’s degree from the National Autonomous University of Mexico 
+            (UNAM) and her Ph.D. in microbiology at the University of Wisconsin–Madison.</h2>
+
+              <!-- LinkedIn icon link -->
+    <a href="https://www.linkedin.com/in/n-cecilia-martinez-gomez-911b6ab1" 
+       target="_blank" 
+       class="linkedin-link">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+          </li>
+
+          <li class="Our-Team swiper-slide">
+            <img src="Team4.jpg" alt="User" class="user-image">
+            <div class="overlay">
+            <h2>Sidney is a Research Associate at RareTerra. She graduated from UC Berkeley in 2025 with a B.S. in Microbial Biology, for 
+            which she completed an honors thesis on microbial adaptations to metabolic stress. She has four years of experience studying 
+            bacterial rare earth metabolism and is passionate about utilizing microbes for sustainable development..</h2>
+
+              <!-- LinkedIn icon link -->
+    <a href= 
+       target="_blank" 
+       class="linkedin-link">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+          </li>
+          </ul>
+
+
+          <div class="swiper-pagination"></div>
+          <div class= "swiper-slide-button swiper-button-prev"></div>
+          <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+      </div>
+      </div>
+    </section>
+    
+    <!--Technology section-->
+
+<section class="technology" id="technology">
+<div class="technology-wrapper">
+
+<div class="technology-text">
+     <div class="slide-text active">
+      <h3 class="slide-title">Nature solved the rare earth recovery problem. We are industrializing it.</h3> 
+       <p class="slide-description">
+      RareTerra turns microbial rare earth biochemistry into a clean, precise alternative to hydrometallurgy. 
+      Our nature-inspired, engineered microbes selectively capture and separate lanthanides at ambient conditions, using dense arrays of
+      chelators and transporters tuned to subtle differences in ionic radius. Rare earths are biologically separated and purified,
+      delivering spec-grade cuts from ore, concentrates, e-waste, and swarf. 
+      </p>
+     </div>
+    <div class="slide-text">
+    <h3 class="slide-title">Rare earths need a new playbook. We’re building it.</h3>
+    <p class="slide-description">
+    Today’s rare-earth supply is monopolized, chemically intensive, and fragile—driving high costs, waste, and uncertainty for everything 
+    from data center construction to EV manufacture. RareTerra’s biology-first platform is built to flip that script.
+    </p>
+</div>
+    <div class="slide-text special-slide">
+    <h3 class="slide-title special-title">How our technology disrupts the <span class="nowrap">STATUS QUO</span>
+</div>
+    <div class="slide-text">
+      <h3 class="slide-title">Bio-selective recovery, not massive solvent plants</h3>
+   <p class="slide-description">
+  Our microbes and ligands target specific rare-earth ions at ambient conditions, shrinking or replacing long solvent-extraction
+  cascades and cutting reagents, wastewater, and energy use.
+  </p>
+</div>
+    <div class="slide-text">
+    <h3 class="slide-title">Feedstock-flexible by design</h3>
+    
+    We unlock value from magnets, mine tailings, process scrap, and low-grade ores that are uneconomic with conventional 
+    flowsheets—turning “waste” into reliable supply.
+    </p>
+</div>
+    <div class="slide-text">
+    <h3 class="slide-title">Distributed, modular refining</h3>
+    <p class="slide-description">
+     Compact, closed-loop units co-located with manufacturers or mines reduce logistics, diversify supply away from single-point 
+     bottlenecks, and build resilience into the chain.
+     </p>
+    </div>
+
+     <button class="next-text-btn">
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+  
+  </div>
+
+  <div class="technology-slider-wrapper">
+  <div id="slider">
+    <figure>
+      <img src="Lab-04.jpg" alt="">
+      <img src="Lab-05.jpg" alt="">
+      <img src="Lab-08.jpg" alt="">
+      <img src="Lab-09.jpg" alt="">
+      <img src="Lab-11.jpg" alt="">
+      <img src="Lab-04.jpg" alt="">
+    </figure>
+  </div>
+
+<script>
+const images = document.querySelectorAll("#slider figure img");
+let current = 0;
+let rounds = 0;
+const totalRounds = 2; // number of rounds before stopping
+
+function showNextImage() {
+  // Reset all images' states
+  images.forEach((img, i) => {
+    img.classList.remove("active", "blur");
+    if (i === current) {
+      img.classList.add("active");
+    } else {
+      img.classList.add("active");
+    }
+  });
+
+  // Move to the next image
+  current++;
+
+  // When we reach the end of all images
+  if (current >= images.length) {
+    current = 0;
+    rounds++;
+  }
+
+  // When we've completed 2 full rounds and are back to the first image
+  if (rounds === totalRounds) {
+    // Stop at the first image
+    clearInterval(sliderInterval);
+
+    // Make sure only the first image is active and unblurred
+    images.forEach((img, i) => {
+      img.classList.remove("active", "blur");
+      if (i === 0) {
+        img.classList.add("active");
+      } else {
+        img.classList.add("active");
+      }
+    });
+  }
+}
+
+// Show the first image immediately
+showNextImage();
+
+// Change every 4 seconds
+const sliderInterval = setInterval(showNextImage, 4000);
+</script>
+
+
+
+</section>
+    
+
+    <!--Contact section-->
+    <section class="contact-section" id="contactus">
+      <div class="section-content">
+        <div class="contact-details">
+          <h2 class="title">Get in Touch</h2>
+          <p class="description">We'd love to hear from you! Reach out to us for inquiries or collaborations.</p>
+
+          <div class="button">
+            <a href="#" class="button-Leave-a-message">Leave a message</a>  
+            <ul class="contact-info-list">
+              <li class="contact-info">
+                <i class="fa-solid fa-envelope"></i>
+                <p>Email Us</p>
+                <p>info@rare-terra.com</p>
+              </li>
+             </ul>  
+            
+             <!-- Popup Modal -->
+<div id="contactPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closeForm()">&times;</span>
+    <h2>Send us a Message</h2>
+    <form class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your Email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Write your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+          </div>
+      </div>
+    </section>
+
+   
+
+  <!--Linking Swiper script-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--Linking custom script-->
+  <script src="script copy.js"></script>
+
+  <script src="script.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+  // Safe, collision-free popup script for "Leave a message"
+  const popupBtn = document.querySelector(".button-Leave-a-message");
+  const popupOverlay = document.querySelector(".popup-overlay");
+  const popupCloseBtn = document.querySelector(".popup-overlay .close-btn");
+
+  // Global function used by the inline onclick="closeForm()" in your HTML
+  function closeForm() {
+    if (popupOverlay) popupOverlay.style.display = "none";
+  }
+
+  // Open popup when clicking the Leave a message link/button
+  if (popupBtn && popupOverlay) {
+    popupBtn.addEventListener("click", (e) => {
+      e.preventDefault();               // stop anchor navigation
+      popupOverlay.style.display = "flex";
+    });
+  }
+
+  // Close when clicking the X button (if it exists)
+  if (popupCloseBtn) {
+    popupCloseBtn.addEventListener("click", closeForm);
+  }
+
+  // Also close when clicking outside the popup content
+  if (popupOverlay) {
+    popupOverlay.addEventListener("click", (e) => {
+      if (e.target === popupOverlay) closeForm();
+    });
+  }
+</script>
+
+
+<script>
+const learnButton = document.querySelector(".learn-button");
+const modal = document.getElementById("learnModal");
+const closeBtn = document.querySelector(".close-modal");
+
+// Open modal
+learnButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.classList.add("show");
+});
+
+// Close modal
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("show");
+});
+
+// Optional: close when clicking outside the box
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modal.classList.remove("show");
+});
+</script>
+
+
+<!-- Swiper JS library -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Your JS file -->
+<script src="js/script.js"></script>
+
+<script>
+// --- Technology section text sync ---
+const techTexts = document.querySelectorAll('.technology-text .slide-text');
+let currentText = 0;
+
+// Show the first text immediately
+function showTechText(index) {
+  techTexts.forEach((text, i) => {
+    text.classList.toggle('active', i === index);
+  });
+}
+
+// Run when the DOM is ready
+document.addEventListener('DOMContentLoaded', startTextSync);
+</script>
+
+<script>
+  // Select all text slides
+  const textSlides = document.querySelectorAll(".technology-text .slide-text");
+  const nextTextBtn = document.querySelector(".next-text-btn");
+  let textIndex = 0;
+
+  function showNextText() {
+    // Hide current text
+    textSlides[textIndex].classList.remove("active");
+
+    // Move to next
+    textIndex = (textIndex + 1) % textSlides.length;
+
+    // Show new text
+    textSlides[textIndex].classList.add("active");
+  }
+
+  // Only change text on click
+  nextTextBtn.addEventListener("click", showNextText);
+</script>
+
+</body>
+</html>
+
+
