@@ -1,0 +1,990 @@
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: "Manrope", sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;
+ }
+
+ :root {
+  --white-color: #fff;
+  --dark-color: #252525;
+  --primary-color: #fff;
+  --secondary-color:#496580;
+  --light-blue-color:#BADDFF;
+  --light-green-color:#BAFFF5;
+  --light-gray-color:#F2F2F2;
+
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.12rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xlm:2.5rem;
+  --font-size-xxl: 3rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+
+  --site-max-width: 100%;
+  
+
+ }
+
+ html {scroll-behavior: smooth;
+}
+
+ ul {
+  list-style: none;
+  
+ }
+
+ a {
+  text-decoration: none;
+ }
+
+ button {
+  cursor: pointer;
+  border:none;
+  background: none;
+
+ }
+
+ img {
+  width: 13%;
+ }
+
+ .section-content {
+  margin: 0 auto;
+  padding: 0 80px;
+  max-width: var(--site-max-width);
+  margin-bottom: 40px;
+ }
+
+ header {
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;           /* optional horizontal padding */
+  height: 120px; 
+  width: 100%;
+  background: var(--primary-color);
+  margin-bottom: 20px;
+  z-index: 999;
+ }
+
+ header .img {
+  display:flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  
+ }
+
+ header .img {
+  display:flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  
+ }
+
+.navbar .nav-logo .logo-text {
+  color: var(--dark-color);
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  right: 280px; /* moves links left so they don't overlap button */
+  top: 50px;
+  gap: 40px; /* spacing between links */
+  background: transparent;
+  height: auto;
+}
+
+
+ .navbar .nav-menu .nav-link {
+  padding: 40px 0px;
+  margin: 30px 5px; 
+  color: var(--dark-color);
+  font-size: var(--font-size-n);
+  border-radius: var(--border-radius-m);
+  transition: 0.3s ease;
+ }
+
+
+ .contact-button {
+  padding: 10px 58px;
+  position:fixed;
+    right: 90px;
+    top: 40px;
+  border: 2px solid transparent;
+  color: var(--dark-color);
+  font-size: var(--font-size-n);
+  background: var(--light-blue-color);
+  border-radius: var(--border-radius-m);
+  transition: 0.3s ease;
+ }
+
+ .contact-button:hover {
+  color: var(--dark-color);
+  background: var(--light-blue-color);
+  
+ }
+
+ .navbar :where(#menu-close-button, #menu-open-button) {
+  display: none;
+ }
+
+ 
+ /* Hero section styling */
+
+ .hero-section {
+  position: relative;
+  height: 100vh;                /* Sets the section height to full screen */
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background:#000;
+ }
+
+  .hero-section .background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* crop/cover nicely */
+  transform: translate(-50%, -50%);
+  z-index: 0;              /* sits behind text */
+  pointer-events: none;    /* text and buttons stay clickable */
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-section .section-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+ .hero-section .hero-details .title {
+  text-align: left;
+  max-width: 35%;
+  font-size: var(--font-size-xxl);
+  color: var(--secondary-color);
+  font-family: "Manrope", sans-serif;
+ }
+
+ .hero-section .hero-details .description {
+  text-align: left;
+  max-width: 34%;
+  margin: 24px 0 40px;
+  font-size: var(--font-size-n);
+ }
+
+ .hero-section .hero-details .learn-button {
+  cursor: pointer;
+  float: left;
+  margin-left: 0;
+  padding: 10px 26px;
+  position: relative;
+  border: 2px solid transparent;
+  color: var(--white-color);
+  font-size: var(--font-size-n);
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-m);
+  transition: 0.3s ease;
+  z-index: 1000;
+ }
+
+ .hero-section .hero-details .learn-button:hover{
+  color: var(--dark-color);
+  background: var(--light-blue-color);
+ }
+ 
+
+ .hero-section .hero-image-wrapper {
+  max-width: 500px;
+  margin-right: 30px;
+ }
+
+ .background-clip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+ }
+
+
+
+ /* Mission section styling */
+
+  
+ .mission-section  {
+  width: 100%;
+  min-height: 100vh; /* or any fixed height you want */
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(173, 216, 230, 1) 0%,   /* azul claro arriba */
+    rgba(255, 255, 255, 1) 100%  /* blanco abajo */
+  );
+  overflow: hidden;
+  padding-top: 150px
+}
+
+
+.mission-section .description {
+   margin: 0 auto;
+  max-width: 65%;
+  font-size: var(--font-size-xl);
+  color: var(--dark-color);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.6;
+}
+
+.mission-section .Mission {
+  display: flex;
+  padding: 0px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mission-section .description + .description {
+  margin-top: 80px; /* adjust the spacing as you like */
+}
+
+.mission-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.mission-icon,
+.vision-icon {
+  font-size: 2.5rem; /* smaller size */
+  margin-bottom: 15px;
+  color: transparent;              /* hides the fill */
+  -webkit-text-stroke: 2px #000;   /* black outline */
+  text-stroke: 2px #000;           /* for broader browser support */
+}
+
+/* optional: slightly lighter stroke for the lightbulb */
+.vision-icon {
+  -webkit-text-stroke: 1.5px #000;
+}
+
+
+ /* Our Team section styling */
+
+  
+ .team-section  {
+  width: 100%;
+  height: 100vh; /* or any fixed height you want */
+  background-color:white;
+  overflow: hidden;
+  position: relative;
+  padding-top: 150px
+}
+
+.team-section .section-title {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items:center;
+  font-size: var(--font-size-xlm);
+  font-weight: var(--font-weight-medium);
+  color: var(--dark-color);
+  font-family: "Manrope", sans-serif;
+  margin-bottom: 20px;
+}
+
+.team-section .description {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  gap: 10;
+  font-size: var(--font-size-n);
+  max-width: 36;
+  color: var(--dark-color);
+  font-family: "Manrope", sans-serif;
+}
+
+.team-section .slider-wrapper {
+  position: relative;
+   overflow: hidden;
+   margin:0 30px 50px;
+}
+
+.team-section .Our-Team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 65px;
+  text-align: center;
+    
+}
+
+.team-section .Our-Team .user-image {
+  width: 350px;
+  height: 53vh;
+  object-fit:cover;
+  margin-bottom: 48px;
+  border-radius: var(--border-radius-s);
+  transition: 0.3s ease;
+}
+.team-section .Our-Team .overlay {
+  position: absolute;
+  top: 20;
+  left: 0;
+  width: 100%; /* covers full image width */
+  height: 72%; /* covers full image height */
+  background: rgba(0, 0, 0, 0.8); /* transparent dark overlay */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 15px;
+  border-radius: var(--border-radius-s);
+  opacity: 0; /* always visible */
+  transition: opacity 0.3s ease;
+}
+
+.team-section .Our-Team:hover .overlay {
+  opacity: 1; /* show overlay on hover */
+}
+
+.team-section .Our-Team .overlay h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.team-section .Our-Team .overlay h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+#our-team {
+  scroll-margin-top: 80px; /* adjust this to match your navbar height */
+}
+
+  
+.team-section .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  position: relative;
+  background: var(--secondary-color);
+  z-index: 20; /* Make sure it's on top */
+}
+
+.team-section .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--light-blue-color);
+}
+
+.team-section .swiper-slide-button {
+  margin-top: -100px;
+  color: var(--secondary-color);
+  transition: 0.3s ease;
+}
+
+.team-section .swiper-slide-button:hover {
+  color: var(--light-blue-color);
+}
+
+.team-section .Our-Team .linkedin-link {
+  
+  color: white;
+  font-size: 2.2rem;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+  align-self: center; /* centers horizontally */
+  position:absolute;
+  bottom: 45px;
+  transform: translate(-50%, 10px); /* center perfectly + small offset down */
+}
+
+.team-section .Our-Team:hover .linkedin-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-section .Our-Team .linkedin-link:hover {
+  color: #BADDFF; /* LinkedIn blue */
+}
+
+/* Technology section styling */
+
+/* Outer wrapper: splits screen */
+.technology-wrapper {
+  display: flex;
+  width: 100%;
+  height: 55rem; /* same as your previous section height */
+  box-sizing: border-box;
+}
+
+/* Left text */
+.technology-text {
+  width: 40%;             /* left 40% for text */
+  padding: 3rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+  color: #000;
+  z-index: 2;
+  position: relative; /* add this */
+}
+
+.technology-text .slide-text {
+  display: none;           /* hide all by default */
+}
+
+.technology-text .slide-text.active {
+  display: block;          /* show only the active one */
+}
+
+.slide-title {
+  font-size: var(--font-size-xlm);
+  font-weight: var(--font-weight-medium);
+  font-family: "Manrope", sans-serif;
+  margin-bottom: 3rem;
+}
+
+/* Special styling for the "How our technology disrupts the status quo" slide */
+.special-slide .special-title {
+  font-size: var(--font-size-xxl);
+  color: var(--secondary-color);
+  font-weight: var(--font-weight-bold);
+  font-family: "Manrope", sans-serif;
+  margin-bottom: 1.2rem;  /* more space below */
+  text-align: center;
+  letter-spacing: 0.3px;
+  word-spacing: 1px;
+}
+
+.slide-description {
+  font-size: var(--font-size-n);
+  line-height: 1.6;
+  margin-top: 0.3rem;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Right slider container */
+.technology-slider-wrapper {
+  width: 60%;             /* right 60% for slider */
+  height: 90%;
+  margin-top: 4rem;       /* adjust this value as you like */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Keep your existing slider code exactly */
+.technology-slider-wrapper #slider {
+  width: 100%;            /* fit 100% of slider-wrapper */
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.technology-slider-wrapper #slider figure {
+  display: flex;
+  position: relative;
+  width: calc(100% * 6);
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  animation: slider 30s infinite ease-in-out;
+}
+
+.technology-slider-wrapper #slider figure img {
+  width: 16.6666%;  /* adjusted to fit exactly */
+  height: auto;           /* keep aspect ratio */
+  transition: filter 0.8s ease, transform 0.8s ease, opacity 0.8s ease;
+  transform: scale(0.90);
+  opacity: 0.7;
+}
+
+.technology-slider-wrapper #slider figure img.active {
+  filter: blur(0);
+  transform: scale(1.03);
+  opacity: 1;
+  z-index: 2;
+}
+
+.next-text-btn {
+ position: absolute;
+  bottom: 8%;
+  left: 85%;
+  transform: none;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  border: 2px solid #000;  /* optional border for more visibility */
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 8px;          /* bigger circle */
+  border-radius: 50%;      /* makes it circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3); /* optional subtle shadow */
+  transition: all 0.3s ease;
+}
+
+.next-text-btn:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* Keyframes remain the same */
+@keyframes slider {
+  0%   { left: 0; }
+  13%  { left: 0; }
+  16%  { left: -16.6667%; }
+  30%  { left: -16.6667%; }
+  33%  { left: -33.3334%; }
+  47%  { left: -33.3334%; }
+  50%  { left: -50%; }
+  64%  { left: -50%; }
+  67%  { left: -66.6667% }
+  81%  { left: -66.6667% }
+  84%  { left: -83.3334%; }
+  100% { left: -83.3334%; }
+}
+
+ /* Contact section styling */
+ .contact-section {
+  background-image: url('Rare_Terra11.jpg'); /* Your image */
+  background-size:contain;       /* Ensures image covers the entire section */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100vh;                /* Sets the section height to full screen */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color:#252525;
+  text-align: left;
+  padding-left: 40px;
+  position: relative;
+ }
+
+
+.contact-section .section-content {
+  display: flex;
+  justify-content: space-between; /* This pushes the two child elements apart */
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.contact-section .contact-info-list  {
+  position: absolute;
+  top: 90%;
+  right: 190px; /* Match your section-content horizontal padding */
+  transform: translateY(-50%) translateX(1%);
+  display: flex;
+  flex-direction: column;
+  align-items:first baseline;
+  gap: 30px;
+  }
+  
+.contact-section .contact-info-list .contact-info i {
+  font-size: var(--font-size-xl);
+  color: var(--light-blue-color);
+}
+
+.contact-info-list .contact-info p:first-of-type {
+  font-size: var(--font-size-s); /* Label size, e.g. "Call Us" */
+  color: var(--dark-color);
+  margin-top: 7px;
+}
+
+.contact-info-list .contact-info p:last-of-type {
+  font-size: var(--font-size-m); /* Actual info, e.g. phone number */
+  font-weight: bold;
+  color: var(--dark-color);
+  margin-top: 7px;
+}
+
+.contact-section .contact-details {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-section .contact-details .title {
+  text-align: left;
+  max-width: 100%;
+  font-size: var(--font-size-xxl);
+  color: var(--secondary-color);
+  font-family: "Manrope", sans-serif;
+ }
+
+ .contact-section .contact-details .description {
+  text-align: left;
+  max-width: 100%;
+  margin-top: 24px;
+ margin-bottom: 40px;
+ margin-left: 0px;
+  font-size: var(--font-size-s);
+ }
+
+ .contact-section .contact-details .button-Leave-a-message {
+  cursor: pointer;
+  float: left;
+  margin-left: 0;
+  padding: 10px 26px;
+  position: relative;
+  border: 2px solid transparent;
+  color: var(--white-color);
+  font-size: var(--font-size-n);
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-m);
+  transition: 0.3s ease;
+  z-index: 1000;
+ }
+
+ .contact-section .contact-details .button:hover{
+  color: var(--dark-color);
+ }
+
+ .contact-section .contact-image-wrapper {
+  max-width: 500px;
+  margin-left: 30px;
+  z-index: 1;
+ }
+
+
+  
+/* Popup Overlay - hidden by default */
+.popup-overlay {
+  display: none; /* 🔹 Hidden until button click */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Popup Content Box */
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  position: relative;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Close Button (X) */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #555;
+}
+
+/* Form Elements */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact-form button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+   
+/* Full-screen modal overlay */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;    /* full width */
+  height: 100vh;   /* full height */
+  background: rgba(0, 0, 0, 0.7); /* semi-transparent overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  animation: fadeIn 0.4s ease forwards;
+  overflow: hidden; /* prevent page scroll underneath */
+}
+
+/* Show modal */
+.modal.show {
+  display: flex;
+}
+
+/* Modal content box - corrected so it fits the viewport */
+.modal-content {
+  position: relative;
+  width: 100vw;   /* full width of screen */
+  height: 100vh;  /* full height of screen */
+  background: linear-gradient(
+    180deg,
+    rgba(173, 216, 230, 1) 0%,   /* light blue top */
+    rgba(255, 255, 255, 1) 100%  /* white bottom */
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  color: var(--dark-color);
+  font-size: var(--font-size-l);
+  line-height: 1.6;
+
+  padding: 80px; /* text spacing inside */
+  box-sizing: border-box;
+
+  animation: popIn 0.4s ease forwards;
+  overflow-y: auto; /* ✅ scroll only inside modal content */
+  overflow-x: hidden;
+  scrollbar-width: thin; /* optional small scrollbar */
+  z-index: 1000000;
+}
+ 
+
+/* The text area inside the modal — almost full width but comfortably padded */
+.modal-content .modal-text {
+  width: 80%;
+  max-width: 80%;
+  padding: 0;          /* padding handled by .modal-content now */
+  margin: 0;           /* center block inside modal-content */
+  color: var(--dark-color);
+  font-size: var(--font-size-l);
+  line-height: 1.6;
+}
+
+/* Add spacing between Mission and Vision headings */
+.modal-content .modal-text h1,
+.modal-content .modal-text h2 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.modal-content .modal-text h2 {
+  margin-top: 100px; /* extra space before Vision */
+}
+
+/* Close button */
+.close-modal {
+   top: 30px;
+  right: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100001;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+body.modal-open .slider-container,
+body.modal-open .button-Leave-a-message {
+  z-index: 0 !important;
+}
+
+.learn-button,
+#learnModal {
+  display: none !important;
+}
+
+ /* Responsive media query code for max width 1100px */
+
+ @media screen and (max-width: 1100px) {
+  .contact-button {
+    display: none;
+  }
+  
+
+   /* Responsive media query code for max width 900px */
+ @media screen and (max-width: 900px) {
+
+  :root {
+  --font-size-m: 1rem;
+  --font-size-l: 1.3rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 1.8rem;
+  }
+
+  body.show-mobile-menu header:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 253, 253, 0.2);
+  }
+
+
+  .navbar :where(#menu-close-button, #menu-open-button) {
+    display: block;
+    font-size: var(--font-size-l);
+  }
+
+  .navbar #menu-close-button {
+    position:absolute;
+    right: 30px;
+    top: 30px;
+  }
+
+  .navbar #menu-open-button {
+    position:fixed;
+    right: 30px;
+    top: 30px;
+    color:var(--dark-color);
+    
+  }
+
+  .navbar .nav-menu  {
+    position: fixed;
+    left: -300px;
+    top: 2px;
+    width: 300px;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding-top: 20px;
+    background: var(--light-blue-color);
+    transition: left 0.2s ease;
+  }
+
+  body.show-mobile-menu .navbar .nav-menu {
+    left: 0;
+  }
+
+  .navbar .nav-menu .nav-link {
+    color: var(--dark-color);
+    display: block;
+    margin: 1px 0;
+    font-size: var(--font-size-m);
+  }
+
+  .hero-section .section-content {
+  gap: 50px;
+  text-align: center;
+  padding: 30px 20px 20px;
+  flex-direction: column-reverse;
+  justify-content: center;
+  }
+
+  .hero-section .hero-details :is(.subtitle,.description) {
+    max-width: 100%;
+  }
+
+  .hero-section .hero-details .buttons {
+    justify-content: center;
+  }
+
+  .hero-section .hero-image-wrapper {
+    max-width: 270px;
+    margin-right: 0;
+  }
+
+
+   /* Responsive media query code for max width 640px */
+ 
+   @media screen and (max-width: 640px) {
+
+    .team-section .slider-wrapper {
+      margin: 0 0 30px;
+    }
+    
+    .team-section .swiper-slide-button {
+      display: none;
+    }
+
+
+}
+   
+
+
